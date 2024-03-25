@@ -19,7 +19,7 @@ jobs:
     - name: Install Qt6
       uses: jurplel/install-qt-action@v2
       with:
-        version: '6.0.0'
+        version: '6.1.0'
         components: 'qt.qt6, qt.tools.cmake, qt.tools.qtcreator'
         host: 'linux'
 
