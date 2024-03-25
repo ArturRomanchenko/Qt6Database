@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>resurces/menu/average.png</file>
+        <file>resurces/menu/click.png</file>
+        <file>resurces/menu/cplpl.png</file>
+        <file>resurces/menu/exit.png</file>
+        <file>resurces/menu/help.png</file>
+        <file>resurces/menu/info.png</file>
+        <file>resurces/menu/programmer.png</file>
+        <file>resurces/menu/sort.png</file>
+        <file>resurces/themes/light-theme.png</file>
+        <file>resurces/themes/dark-theme.png</file>
+    </qresource>
+</RCC>
