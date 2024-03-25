@@ -38,11 +38,11 @@ void Themes::applyDarkTheme() {
 QMenu* Themes::createThemeMenu() {
     QMenu* themeMenu = new QMenu("Тема");
 
-    QAction* lightThemeAction = new QAction("Светлая тема", themeMenu);
+    QAction* lightThemeAction = new QAction("Світла", themeMenu);
     lightThemeAction->setIcon(QIcon(":/image/resurces/themes/light-theme.png"));
     themeMenu->addAction(lightThemeAction);
 
-    QAction* darkThemeAction = new QAction("Темная тема", themeMenu);
+    QAction* darkThemeAction = new QAction("Темна", themeMenu);
     darkThemeAction->setIcon(QIcon(":/image/resurces/themes/dark-theme.png"));
     themeMenu->addAction(darkThemeAction);
 
