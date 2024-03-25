@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
     QMenu* themeMenu = Themes::createThemeMenu();
     w.menuBar()->addMenu(themeMenu);
 
-    w.setWindowTitle("База Данных: Автосалон");
+    //w.setWindowTitle("База Данных: Автосалон");
     w.show();
 
     return application.exec();
