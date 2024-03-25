@@ -3,8 +3,8 @@
 #include <QIcon>
 
 bool Themes::isDarkTheme = false;
-
 Themes::Themes(QObject *parent) : QObject(parent) {}
+
 
 void Themes::applyLightTheme() {
     if (isDarkTheme) {
@@ -13,6 +13,7 @@ void Themes::applyLightTheme() {
         isDarkTheme = false;
     }
 }
+
 
 void Themes::applyDarkTheme() {
     if (!isDarkTheme) {
@@ -34,6 +35,7 @@ void Themes::applyDarkTheme() {
         isDarkTheme = true;
     }
 }
+
 
 QMenu* Themes::createThemeMenu() {
     QMenu* themeMenu = new QMenu("Тема");
