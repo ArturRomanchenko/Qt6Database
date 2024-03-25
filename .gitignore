@@ -1,0 +1,6 @@
+# Qt Creator files
+*.user
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+CMakeLists.txt.user
