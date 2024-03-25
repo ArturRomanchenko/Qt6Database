@@ -1,0 +1,31 @@
+name: CI/CD with CMake, Qt6, and GitHub Actions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Qt6
+      uses: jurplel/install-qt-action@v2
+      with:
+        version: '6.0.0'
+        components: 'qt.qt6, qt.tools.cmake, qt.tools.qtcreator'
+        host: 'linux'
+
+    - name: Configure and build with CMake
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        make
