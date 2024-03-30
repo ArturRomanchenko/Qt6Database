@@ -1,8 +1,10 @@
-## Database for car dealership
+![example workflow](https://github.com/Winderton/xplatform/actions/workflows/cmake.yml/badge.svg)
+
+## Database for car dealership 
 
 ### About 
 
-My course project for college. Writing basic GUI functions for ___SQLite___ database using ___Qt 6.1.0.___
+```Car Dealer``` -  is a course project for college. The functionality of which is to write a GUI to interact with the database. Uses the modern __Qt 6.1.0__ framework and __SQLite3__ database.
 
 ### Built With
 
@@ -18,7 +20,8 @@ My course project for college. Writing basic GUI functions for ___SQLite___ data
 
 ### Showing the program
 
-[](https://github.com/ArturRomanchenko/Qt6Database/assets/149331842/e17a2bbf-a689-4b3b-8943-4f3c6f98cb11)
+[Showing the program](https://github.com/ArturRomanchenko/Qt6Database/assets/149331842/e17a2bbf-a689-4b3b-8943-4f3c6f98cb11)
 
+### Contact
 
-
+[Telegram](https://t.me/woshetitelniy)
