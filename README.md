@@ -2,7 +2,7 @@
 
 ### About 
 
-> My course project for college. Writing basic GUI functions for ___SQLite___ database using ___Qt 6.1.0.___
+My course project for college. Writing basic GUI functions for ___SQLite___ database using ___Qt 6.1.0.___
 
 ### Built With
 
@@ -18,7 +18,7 @@
 
 ### Showing the program
 
-[Запись экрана от 2024-03-30 19-51-48.webm](https://github.com/ArturRomanchenko/Qt6Database/assets/149331842/e17a2bbf-a689-4b3b-8943-4f3c6f98cb11)
+[](https://github.com/ArturRomanchenko/Qt6Database/assets/149331842/e17a2bbf-a689-4b3b-8943-4f3c6f98cb11)
 
 
 
