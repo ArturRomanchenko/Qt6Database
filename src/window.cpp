@@ -2,12 +2,12 @@
 #include "window.h"
 #include "interactions.h"
 
-
 #include <QMessageBox>
 #include <QInputDialog>
 #include <QSqlError>
 #include <QtSql>
 #include <QVBoxLayout>
+
 
 Window::Window(QWidget *parent)
     : QMainWindow(parent)
@@ -25,7 +25,7 @@ Window::Window(QWidget *parent)
     }
 
 
-    /* створення таблиці бази даних */
+    /* creating a database table */
     database_query = new QSqlQuery(database);
     database_query->exec("CREATE TABLE CarDealer(ID INTEGER PRIMARY KEY AUTOINCREMENT"
                          ", Модель автомобіля TEXT"
@@ -40,10 +40,10 @@ Window::Window(QWidget *parent)
 
     ui->tableView->setModel(database_model);
 
-    /* приховати стовпець "ID" з бази даних */
+    /* hide the 'ID' column from the database */
     ui->tableView->hideColumn(database_model->fieldIndex("ID"));
 
-    /* зміни стандартних розмірів виведення стовпців таблиці */
+    /* changing the standard output sizes of table columns */
     ui->tableView->setColumnWidth(database_model->fieldIndex("Модель"), 200);
     ui->tableView->setColumnWidth(database_model->fieldIndex("Рік"), 100);
     ui->tableView->setColumnWidth(database_model->fieldIndex("Колір"), 100);
