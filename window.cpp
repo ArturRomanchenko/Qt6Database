@@ -45,9 +45,9 @@ Window::Window(QWidget *parent)
 
     /* changing the standard output sizes of table columns */
     ui->tableView->setColumnWidth(database_model->fieldIndex("Модель"), 200);
-    ui->tableView->setColumnWidth(database_model->fieldIndex("Рік"), 100);
-    ui->tableView->setColumnWidth(database_model->fieldIndex("Колір"), 100);
-    ui->tableView->setColumnWidth(database_model->fieldIndex("Ціна"), 100);
+    ui->tableView->setColumnWidth(database_model->fieldIndex("Рік"), 200);
+    ui->tableView->setColumnWidth(database_model->fieldIndex("Колір"), 200);
+    ui->tableView->setColumnWidth(database_model->fieldIndex("Ціна"), 200);
     ui->tableView->setColumnWidth(database_model->fieldIndex("Прізвище"), 200);
 
     connect(ui->buttonUPDATE, &QPushButton::clicked, this, &Window::on_buttonUPDATE_clicked);
@@ -75,8 +75,6 @@ void Window::on_buttonDELETE_clicked() {
                         , QMessageBox::Yes | QMessageBox::No
                         , this);
 
-    message.setButtonText(QMessageBox::Yes, "Так");
-    message.setButtonText(QMessageBox::No, "Ні");
     message.setDefaultButton(QMessageBox::No);
 
     int answer = message.exec();
@@ -136,12 +134,18 @@ void Window::on_Display_triggered() {
     }
 
     if (query.next()) {
-        QString result = "Дані про автомобіль:\n"
-                         "Модель: " + query.value("Модель").toString() + "\n"
-                         "Рік випуску: " + query.value("Рік").toString() + "\n"
-                         "Колір: " + query.value("Колір").toString() + "\n"
-                         "Ціна: " + query.value("Ціна").toString() + "\n"
-                         "Прізвище клієнта: " + query.value("Прізвище").toString();
+        QString result = QString("Дані про автомобіль:\n"
+                                "Модель: %1\n"
+                                "Рік випуску: %2\n"
+                                "Колір: %3\n"
+                                "Ціна грн: %4\n"
+                                "Прізвище клієнта: %5\n")
+                                .arg(query.value("Модель").toString())
+                                .arg(query.value("Рік").toString())
+                                .arg(query.value("Колір").toString())
+                                .arg(query.value("Ціна").toString())
+                                .arg(query.value("Прізвище").toString());
+
 
         QMessageBox::information(this, tr("Інформація про автомобіль"), result);
     } else {
@@ -160,8 +164,6 @@ void Window::on_About_triggered() {
 
 
 void Window::on_Exit_triggered() {
-    ui->statusbar->showMessage("Вихід із програми...", 1000);
-
     QApplication::quit();
 }
 

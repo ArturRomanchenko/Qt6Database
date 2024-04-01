@@ -8,8 +8,8 @@
 
 class Interactions {
 public:
-    void selectionSortByPrice(QSqlTableModel* database_model);
-    void calculateAveragePrice(Window &window);
+    void selectionSortByPrice(QSqlTableModel* database_model) const;
+    void calculateAveragePrice(Window &window) const;
 };
 
 

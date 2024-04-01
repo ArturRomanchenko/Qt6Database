@@ -1,6 +1,8 @@
 #include "themes.h"
+
 #include <QApplication>
 #include <QIcon>
+
 
 bool Themes::isDarkTheme = false;
 Themes::Themes(QObject *parent) : QObject(parent) {}

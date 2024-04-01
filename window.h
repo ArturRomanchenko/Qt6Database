@@ -26,6 +26,7 @@ public:
 
 
 private slots:
+    /* Buttons */
     void on_tableView_clicked(const QModelIndex &index);
     void on_buttonADD_clicked();
     void on_buttonDELETE_clicked();

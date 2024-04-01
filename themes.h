@@ -1,6 +1,8 @@
 #ifndef THEMES_H
 #define THEMES_H
 
+#pragma once
+
 #include <QObject>
 #include <QPalette>
 #include <QMenu>

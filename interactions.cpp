@@ -1,10 +1,7 @@
 #include "interactions.h"
 
 
-void Interactions::selectionSortByPrice(QSqlTableModel* database_model) {
-
-    //qDebug() << "Starting selection sort by price...";
-
+void Interactions::selectionSortByPrice(QSqlTableModel* database_model) const {
     int rowCount = database_model->rowCount();
 
     for (int i = 0; i < rowCount - 1; ++i) {
@@ -28,12 +25,10 @@ void Interactions::selectionSortByPrice(QSqlTableModel* database_model) {
             }
         }
     }
-
-    //qDebug() << "Selection sort by price finished.";
 }
 
 
-void Interactions::calculateAveragePrice(Window &window) {
+void Interactions::calculateAveragePrice(Window &window) const {
     QSqlDatabase database = window.getDatabase();
     QSqlQuery query(database);
     query.exec("SELECT AVG(Ціна) FROM CarDealer");
