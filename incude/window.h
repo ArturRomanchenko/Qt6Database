@@ -1,7 +1,6 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-
 #pragma once
 
 #include <QMainWindow>
@@ -36,10 +35,7 @@ private slots:
     void on_Sortted_triggered();
     void on_Average_triggered();
     void on_Display_triggered();
-
-
     void on_About_triggered();
-
     void on_Exit_triggered();
 
 
