@@ -8,7 +8,6 @@
 #include <QtSql>
 #include <QVBoxLayout>
 
-
 Window::Window(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Window)
@@ -99,10 +98,19 @@ void Window::on_buttonUPDATE_clicked() {
 
 
 void Window::on_Sortted_triggered() {
-    Interactions interactions;
-    interactions.selectionSortByPrice(database_model);
+    Interactions sort;
+    sort.selectionSortByPrice_increase(database_model);
     ui->tableView->sortByColumn(database_model->fieldIndex("Ціна"), Qt::AscendingOrder);
 
+    ui->statusbar->showMessage("Сортування бази даних...", 2000);
+}
+
+
+void Window::on_Sortted_2_triggered() {
+    Interactions sort;
+    sort.selectionSortByPrice_descending(database_model);
+
+    ui->tableView->sortByColumn(database_model->fieldIndex("Ціна"), Qt::DescendingOrder);
     ui->statusbar->showMessage("Сортування бази даних...", 2000);
 }
 
@@ -167,3 +175,14 @@ void Window::on_Exit_triggered() {
     QApplication::quit();
 }
 
+void Window::on_open_triggered() {
+    Interactions convert;
+
+    QString dbFile = "CarDealer.db";
+    QString txtFile = "DataBase.txt";
+
+    convert.convertDbToTxt(dbFile, txtFile);
+
+    convert.openTxtFile(txtFile);
+    ui->statusbar->showMessage("Відкриття файлу бази даних", 4000);
+}

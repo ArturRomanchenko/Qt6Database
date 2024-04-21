@@ -101,6 +101,7 @@
      <string>Функції бази данних</string>
     </property>
     <addaction name="Sortted"/>
+    <addaction name="Sortted_2"/>
     <addaction name="Average"/>
     <addaction name="Display"/>
    </widget>
@@ -111,6 +112,7 @@
     <property name="title">
      <string>Файл</string>
     </property>
+    <addaction name="open"/>
     <addaction name="Exit"/>
    </widget>
    <widget class="QMenu" name="menu_3">
@@ -133,7 +135,63 @@
      <normaloff>:/image/resurces/menu/sort.png</normaloff>:/image/resurces/menu/sort.png</iconset>
    </property>
    <property name="text">
-    <string>Сортувати за ціною</string>
+    <string>Сортувати за ціною (зростання)</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="About">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/resurces/menu/programmer.png</normaloff>:/image/resurces/menu/programmer.png</iconset>
+   </property>
+   <property name="text">
+    <string>Про розробників</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="open">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/resurces/menu/click.png</normaloff>:/image/resurces/menu/click.png</iconset>
+   </property>
+   <property name="text">
+    <string>Відкрити</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="Exit">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/resurces/menu/exit.png</normaloff>:/image/resurces/menu/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Вихід</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="Sortted_2">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/image/resurces/menu/sort.png</normaloff>:/image/resurces/menu/sort.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сортувати за ціною (спадання)</string>
    </property>
    <property name="font">
     <font>
@@ -162,34 +220,6 @@
    </property>
    <property name="text">
     <string>Інформація за моделлю</string>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-  </action>
-  <action name="About">
-   <property name="icon">
-    <iconset resource="res.qrc">
-     <normaloff>:/image/resurces/menu/programmer.png</normaloff>:/image/resurces/menu/programmer.png</iconset>
-   </property>
-   <property name="text">
-    <string>Про розробників</string>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-    </font>
-   </property>
-  </action>
-  <action name="Exit">
-   <property name="icon">
-    <iconset resource="res.qrc">
-     <normaloff>:/image/resurces/menu/exit.png</normaloff>:/image/resurces/menu/exit.png</iconset>
-   </property>
-   <property name="text">
-    <string>Вихід</string>
    </property>
    <property name="font">
     <font>

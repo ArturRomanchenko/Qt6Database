@@ -10,6 +10,10 @@
 #include <QSqlTableModel>
 #include <QMessageBox>
 
+#include <QSqlRecord>
+#include <QFile>
+#include <QTextStream>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Window; }
@@ -38,7 +42,9 @@ private slots:
     void on_Display_triggered();
     void on_About_triggered();
     void on_Exit_triggered();
+    void on_open_triggered();
 
+    void on_Sortted_2_triggered();
 
 private:
     Ui::Window *ui;
