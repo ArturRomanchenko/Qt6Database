@@ -167,13 +167,11 @@ void Window::on_About_triggered() {
 
     QMessageBox::information(this, "Про розробників:",
                              "Розробник цього ПЗ - Романченко Артур,"
-                             "\nСтуден ВСП Павлоградський фаховий коледж НТУ ''ДП''\n Групи KI-2-21");
+                             "\nСтуден ВСП Павлоградський фаховий коледж НТУ ''ДП''\n"
+                             "Групи KI-2-21\n"
+                             "Керівник КП: Бахмет О.В.");
 }
 
-
-void Window::on_Exit_triggered() {
-    QApplication::quit();
-}
 
 void Window::on_open_triggered() {
     Interactions convert;
@@ -185,4 +183,9 @@ void Window::on_open_triggered() {
 
     convert.openTxtFile(txtFile);
     ui->statusbar->showMessage("Відкриття файлу бази даних", 4000);
+}
+
+
+void Window::on_Exit_triggered() {
+    QApplication::quit();
 }

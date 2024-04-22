@@ -149,7 +149,10 @@
      <normaloff>:/image/resurces/menu/programmer.png</normaloff>:/image/resurces/menu/programmer.png</iconset>
    </property>
    <property name="text">
-    <string>Про розробників</string>
+    <string>Про розробника</string>
+   </property>
+   <property name="toolTip">
+    <string>Про розробника</string>
    </property>
    <property name="font">
     <font>
