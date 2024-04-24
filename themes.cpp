@@ -1,5 +1,4 @@
 #include "themes.h"
-
 #include <QApplication>
 #include <QIcon>
 

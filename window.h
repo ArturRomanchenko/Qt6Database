@@ -9,7 +9,6 @@
 #include <QSqlQuery>
 #include <QSqlTableModel>
 #include <QMessageBox>
-
 #include <QSqlRecord>
 #include <QFile>
 #include <QTextStream>
@@ -30,13 +29,15 @@ public:
 
 
 private slots:
-    /* Buttons */
+    /* при натисканні знаходить курсор у вікні */
     void on_tableView_clicked(const QModelIndex &index);
+
+    /* кнопки в програмі */
     void on_buttonADD_clicked();
     void on_buttonDELETE_clicked();
     void on_buttonUPDATE_clicked();
 
-    /* Menu bar */
+    /* функції в меню */
     void on_Sortted_triggered();
     void on_Average_triggered();
     void on_Display_triggered();
@@ -51,7 +52,8 @@ private:
     QSqlDatabase database;
     QSqlQuery* database_query;
     QSqlTableModel* database_model;
-    int row_database; /* number current word */
+    /* номер поточної строки */
+    int row_database;
 
 
 public slots:

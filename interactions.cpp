@@ -1,5 +1,8 @@
 #include "interactions.h"
 
+/**
+ * Сортування вибором, методом зростання
+ */
 
 void Interactions::selectionSortByPrice_increase(QSqlTableModel* database_model) const {
     int rowCount = database_model->rowCount();
@@ -11,7 +14,7 @@ void Interactions::selectionSortByPrice_increase(QSqlTableModel* database_model)
         for (int j = i + 1; j < rowCount; ++j) {
             int currentPrice = database_model->data(database_model->index(j, database_model->fieldIndex("Ціна"))).toInt();
 
-            if (currentPrice < minPrice) { /* increase */
+            if (currentPrice < minPrice) { /* метод зростання */
                 minIndex = j;
                 minPrice = currentPrice;
             }
@@ -27,6 +30,9 @@ void Interactions::selectionSortByPrice_increase(QSqlTableModel* database_model)
     }
 }
 
+/**
+ * Сортування вибором, методом спадання
+ */
 
 void Interactions::selectionSortByPrice_descending(QSqlTableModel* database_model) const {
     int rowCount = database_model->rowCount();
@@ -38,7 +44,7 @@ void Interactions::selectionSortByPrice_descending(QSqlTableModel* database_mode
             for (int j = i + 1; j < rowCount; ++j) {
                 int currentPrice = database_model->data(database_model->index(j, database_model->fieldIndex("Ціна"))).toInt();
 
-                if (currentPrice > maxPrice) { /* descending */
+                if (currentPrice > maxPrice) { /* метод спадання */
                     maxIndex = j;
                     maxPrice = currentPrice;
                 }
@@ -54,6 +60,10 @@ void Interactions::selectionSortByPrice_descending(QSqlTableModel* database_mode
         }
 }
 
+/**
+ * Метод класу який робить розрахунок
+ * середньої ціни авто в базі даних
+ */
 
 void Interactions::calculateAveragePrice(Window &window) const {
     QSqlDatabase database = window.getDatabase();
@@ -68,6 +78,13 @@ void Interactions::calculateAveragePrice(Window &window) const {
         QMessageBox::warning(nullptr, "Помилка", "Не вдалося отримати середню вартість автомобілів");
     }
 }
+
+/**
+ * Метод класу, який конвертує базу даних з SQLite3
+ * (тобто файлу з розширенням ".db")
+ * в файл з росширенням ".txt",
+ * при цьому створює гарний образ таблиці в файлі
+ */
 
 void Interactions::convertDbToTxt(const QString &dbFile, const QString &txtFile) {
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -134,6 +151,11 @@ void Interactions::convertDbToTxt(const QString &dbFile, const QString &txtFile)
 
     qDebug() << "Конвертацію успішно завершено!";
 }
+
+/**
+ * Метод класу для відкриття файлу бази даних
+ * в будь-якому текстовому редакторі на комп'ютері
+ */
 
 void Interactions::openTxtFile(const QString &txtFile) {
     QUrl fileUrl = QUrl::fromLocalFile(txtFile);
