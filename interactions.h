@@ -4,7 +4,6 @@
 #pragma once
 
 #include "window.h"
-
 #include <QCoreApplication>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -12,7 +11,6 @@
 #include <QFile>
 #include <QTextStream>
 #include <QDebug>
-
 #include <QCoreApplication>
 #include <QDesktopServices>
 #include <QUrl>

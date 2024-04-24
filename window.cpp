@@ -1,12 +1,13 @@
 #include "./ui_interface.h"
 #include "window.h"
 #include "interactions.h"
-
 #include <QMessageBox>
 #include <QInputDialog>
 #include <QSqlError>
 #include <QtSql>
 #include <QVBoxLayout>
+#include <QFileDialog>
+
 
 Window::Window(QWidget *parent)
     : QMainWindow(parent)
@@ -23,8 +24,10 @@ Window::Window(QWidget *parent)
         qDebug("Not open database!");
     }
 
+    /**
+     * Створення бази даних завдяки SQL запиту
+     */
 
-    /* creating a database table */
     database_query = new QSqlQuery(database);
     database_query->exec("CREATE TABLE CarDealer(ID INTEGER PRIMARY KEY AUTOINCREMENT"
                          ", Модель автомобіля TEXT"
@@ -39,10 +42,10 @@ Window::Window(QWidget *parent)
 
     ui->tableView->setModel(database_model);
 
-    /* hide the 'ID' column from the database */
+    /* Приховування стовбця з номером ID строки в таблиці */
     ui->tableView->hideColumn(database_model->fieldIndex("ID"));
 
-    /* changing the standard output sizes of table columns */
+    /* зміна стандартних розмірів виводу стовпців таблиці */
     ui->tableView->setColumnWidth(database_model->fieldIndex("Модель"), 200);
     ui->tableView->setColumnWidth(database_model->fieldIndex("Рік"), 200);
     ui->tableView->setColumnWidth(database_model->fieldIndex("Колір"), 200);
@@ -163,7 +166,7 @@ void Window::on_Display_triggered() {
 
 
 void Window::on_About_triggered() {
-    ui->statusbar->showMessage("Інформація про розробників", 4000);
+    ui->statusbar->showMessage("Інформація про розробника", 4000);
 
     QMessageBox::information(this, "Про розробників:",
                              "Розробник цього ПЗ - Романченко Артур,"
@@ -175,15 +178,18 @@ void Window::on_About_triggered() {
 
 void Window::on_open_triggered() {
     Interactions convert;
+    QString txtFile = QInputDialog::getText(this, tr("Збереження"), tr("Назва файлу:") + " (*.txt)");
 
-    QString dbFile = "CarDealer.db";
-    QString txtFile = "DataBase.txt";
+    if (!txtFile.isEmpty()) {
+        QString dbFile = "CarDealer.db";
 
-    convert.convertDbToTxt(dbFile, txtFile);
+        convert.convertDbToTxt(dbFile, txtFile);
+        convert.openTxtFile(txtFile);
 
-    convert.openTxtFile(txtFile);
-    ui->statusbar->showMessage("Відкриття файлу бази даних", 4000);
+        ui->statusbar->showMessage("Відкриття файлу бази даних", 4000);
+    }
 }
+
 
 
 void Window::on_Exit_triggered() {

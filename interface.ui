@@ -98,7 +98,7 @@
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="title">
-     <string>Функції бази данних</string>
+     <string>Операції</string>
     </property>
     <addaction name="Sortted"/>
     <addaction name="Sortted_2"/>
@@ -166,7 +166,10 @@
      <normaloff>:/image/resurces/menu/click.png</normaloff>:/image/resurces/menu/click.png</iconset>
    </property>
    <property name="text">
-    <string>Відкрити</string>
+    <string>Зберегти та відкрити</string>
+   </property>
+   <property name="toolTip">
+    <string>Зберегти та відкрити</string>
    </property>
    <property name="font">
     <font>
