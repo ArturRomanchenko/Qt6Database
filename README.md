@@ -20,7 +20,7 @@
 
 ### Showing the program
 
-[Showing the program](https://github.com/ArturRomanchenko/Qt6Database/assets/149331842/e17a2bbf-a689-4b3b-8943-4f3c6f98cb11)
+[Showing the program](https://github.com/ArturRomanchenko/Qt6Database/assets/149331842/3935bc2e-52eb-407e-af59-cd4a4631fb05)
 
 ### Contact
 
