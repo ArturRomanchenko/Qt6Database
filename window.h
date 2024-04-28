@@ -44,7 +44,6 @@ private slots:
     void on_About_triggered();
     void on_Exit_triggered();
     void on_open_triggered();
-
     void on_Sortted_2_triggered();
 
 private:
