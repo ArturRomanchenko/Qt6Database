@@ -4,7 +4,7 @@
 
 ### About 
 
-```Car Dealer``` -  is a course project for college. The functionality of which is to write a GUI to interact with the database. Uses the modern __Qt 6.1.0__ framework and __SQLite3__ database.
+```Car Dealer``` -  is a course project for college. The functionality of which is to write a GUI to interact with the database. Uses the modern __Qt 6.7__ framework and __SQLite3__ database.
 
 ### Built With
 
