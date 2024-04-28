@@ -166,10 +166,10 @@
      <normaloff>:/image/resurces/menu/click.png</normaloff>:/image/resurces/menu/click.png</iconset>
    </property>
    <property name="text">
-    <string>Зберегти та відкрити</string>
+    <string>Відкрити</string>
    </property>
    <property name="toolTip">
-    <string>Зберегти та відкрити</string>
+    <string>Відкрити</string>
    </property>
    <property name="font">
     <font>
@@ -211,7 +211,10 @@
      <normaloff>:/image/resurces/menu/average.png</normaloff>:/image/resurces/menu/average.png</iconset>
    </property>
    <property name="text">
-    <string>Середня вартість</string>
+    <string>Середня вартість автомобіля</string>
+   </property>
+   <property name="toolTip">
+    <string>Середня вартість автомобіля</string>
    </property>
    <property name="font">
     <font>
@@ -225,7 +228,7 @@
      <normaloff>:/image/resurces/menu/info.png</normaloff>:/image/resurces/menu/info.png</iconset>
    </property>
    <property name="text">
-    <string>Інформація за моделлю</string>
+    <string>Дані за моделлю автомобіля</string>
    </property>
    <property name="font">
     <font>

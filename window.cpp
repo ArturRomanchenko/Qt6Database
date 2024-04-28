@@ -168,7 +168,7 @@ void Window::on_Display_triggered() {
 void Window::on_About_triggered() {
     ui->statusbar->showMessage("Інформація про розробника", 4000);
 
-    QMessageBox::information(this, "Про розробників:",
+    QMessageBox::information(this, "Про розробника:",
                              "Розробник цього ПЗ - Романченко Артур,"
                              "\nСтуден ВСП Павлоградський фаховий коледж НТУ ''ДП''\n"
                              "Групи KI-2-21\n"
