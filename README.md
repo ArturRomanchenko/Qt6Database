@@ -8,7 +8,7 @@
 
 ### Built With
 
-+ [C++](https://cbrnsolafact.com/)
++ [C++](https://cplusplus.com/forum/)
 + [Qt](https://www.qt.io/)
 + [CMake](https://cmake.org/)
 + [SQLite3](https://www.sqlite.org/)
